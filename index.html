@@ -25,8 +25,8 @@
           aria-label="Department of Economic Opportunity, home"
           ><span
             ><b
-              ><i class="l1">department of</i
-              ><i class="l2">economic<br />opportunity</i></b
+              ><i class="l1">department of </i>
+              <i class="l2">economic opportunity</i></b
             ><small>County of Los Angeles</small></span
           ></a
         >
@@ -292,13 +292,13 @@
       <div class="w fmain">
         <a class="logo" href="#top"
           ><span
-            ><b
-              ><i class="l1" style="color: #bcd3de">department of</i
-              ><i
+            ><b>
+              <i class="l1" style="color: #bcd3de">department of</i>
+              <i
                 class="l2"
                 style="background-image: linear-gradient(135deg, #fff, #bcd3de)"
                 >economic<br />opportunity</i
-              ></b
+              > </b
             ><small style="color: #bcd3de">County of Los Angeles</small></span
           ></a
         >
@@ -364,7 +364,7 @@
           "Find job opportunities, training programs and career support.",
           "Explore Opportunities",
           "job",
-          "navy",
+          "avocado",
           "A career counselor helping a job seeker at a laptop",
         ],
         [
@@ -396,7 +396,7 @@
         [
           "Find a Job",
           "Explore job opportunities and career resources",
-          "navy",
+          "avocado",
         ],
         [
           "Grow Your Business",
@@ -438,7 +438,8 @@
         "Community Programs",
       ];
       const ICON = {
-        navy: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.2" stroke="white" stroke-width="1.8"/><path d="M5 20c1.2-3.8 4-5.6 7-5.6s5.8 1.8 7 5.6" stroke="white" stroke-width="1.8" stroke-linecap="round"/></svg>',
+        avocado:
+          '<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.2" stroke="white" stroke-width="1.8"/><path d="M5 20c1.2-3.8 4-5.6 7-5.6s5.8 1.8 7 5.6" stroke="white" stroke-width="1.8" stroke-linecap="round"/></svg>',
         purple:
           '<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="5" y="10" width="6" height="10" stroke="white" stroke-width="1.8"/><rect x="13" y="5" width="6" height="15" stroke="white" stroke-width="1.8"/></svg>',
         blue: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 4 2 9l10 5 10-5-10-5Z" stroke="white" stroke-width="1.8" stroke-linejoin="round"/><path d="M6 12v5c0 1.5 2.8 3 6 3s6-1.5 6-3v-5" stroke="white" stroke-width="1.8"/></svg>',
@@ -472,11 +473,11 @@
         '<a href="#initiatives">Programs & Initiatives</a><a href="#">About DEO</a>';
       $("#qcard").innerHTML = QUICK.map(
         (x) =>
-          `<a href="#path"><span class="ico" style="background-image:var(--g-${x[2]})">${ICON[x[2]]}</span><span><b>${x[0]}</b><span>${x[1]}</span></span>${AR}</a>`,
+          `<a href="#path"><span class="ico" style="background:var(--${x[2]})">${ICON[x[2]]}</span><span><b>${x[0]}</b><span>${x[1]}</span></span>${AR}</a>`,
       ).join("");
       $("#pathgrid").innerHTML = PATH.map(
         (x) =>
-          `<article class="pcard"><div class="ph"><img src="${PHOTOS[x[3]]}" alt="${x[5]}"></div><div class="body"><span class="dot" style="background-image:var(--g-${x[4]})">${ICON[x[4]]}</span><h3>${x[0]}</h3><p>${x[1]}</p><a class="link" href="#help">${x[2]} ${AR}</a></div></article>`,
+          `<article class="pcard"><div class="ph"><img src="${PHOTOS[x[3]]}" alt="${x[5]}"></div><div class="body"><span class="dot" style="background:var(--${x[4]})">${ICON[x[4]]}</span><h3>${x[0]}</h3><p>${x[1]}</p><a class="link" href="#help">${x[2]} ${AR}</a></div></article>`,
       ).join("");
       $("#nlist").innerHTML = NW.map(
         (x) =>

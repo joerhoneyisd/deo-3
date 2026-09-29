@@ -1,21 +1,21 @@
 :root {
   color-scheme: light;
   --ink: #0b2f45;
-  --navy: #0a3f5c;
   --mute: #5d7183;
   --line: #e3eaef;
-  --teal: #0e8f86;
-  --tealD: #0a6e68;
+  --teal: #35e6fc;
+  --tealD: #0098c9;
   --deep: #0d3550;
   --panel: #f3f7f8;
+  --avocado: #b3b503;
   --purple: #7b4fd1;
   --blue: #2f7fe0;
   --coral: #f07a57;
-  --g-navy: linear-gradient(135deg, #0d3550, #0d3550);
+  --g-avocado: linear-gradient(135deg, #0d3550, #0d3550);
   --g-purple: linear-gradient(135deg, #7b4fd1, #7b4fd1);
   --g-blue: linear-gradient(135deg, #2f7fe0, #2f7fe0);
   --g-coral: linear-gradient(135deg, #f07a57, #f07a57);
-  --g-btn: linear-gradient(135deg, var(--navy), var(--deep));
+  --g-btn: linear-gradient(135deg, var(--avocado), var(--deep));
   --g-btnH: linear-gradient(135deg, var(--deep), #071a28);
   box-sizing: border-box;
   padding-top: env(safe-area-inset-top, 0px);
@@ -56,7 +56,7 @@ h3 {
   font: 700 0.78rem Figtree;
   letter-spacing: 0.09em;
   text-transform: uppercase;
-  color: var(--navy);
+  color: var(--avocado);
   margin: 0 0 10px;
 }
 :focus-visible {
@@ -81,7 +81,7 @@ a:hover .arrow {
   position: sticky;
   top: env(safe-area-inset-top, 0px);
   z-index: 9;
-  background: rgba(255, 255, 255, 0.8);
+  background: #ffffffbb;
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--line);
 }
@@ -96,6 +96,7 @@ a:hover .arrow {
   align-items: center;
   gap: 10px;
   text-decoration: none;
+  text-wrap: balance;
   flex: none;
 }
 .logo b {
@@ -104,16 +105,18 @@ a:hover .arrow {
     700 0.82rem/1.08 "Bricolage Grotesque",
     sans-serif;
   letter-spacing: -0.01em;
+  text-wrap: balance;
+  max-width: 5rem;
 }
 .logo i {
-  display: block;
+  display: inline;
   font-style: normal;
 }
 .logo .l1 {
   color: var(--mute);
 }
 .logo .l2 {
-  background-image: linear-gradient(135deg, var(--deep), var(--navy));
+  background-image: linear-gradient(151deg, var(--tealD), var(--deep));
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -157,7 +160,7 @@ nav > a:hover,
 .dd:hover > button,
 .dd:focus-within > button {
   background: var(--panel);
-  color: var(--teal);
+  color: var(--tealD);
 }
 .dd {
   position: relative;
@@ -189,7 +192,7 @@ nav > a:hover,
 }
 .dd ul a:hover {
   background: var(--panel);
-  color: var(--teal);
+  color: var(--tealD);
 }
 .tools {
   display: flex;
@@ -224,11 +227,10 @@ nav > a:hover,
   white-space: nowrap;
   transition:
     box-shadow 0.2s,
-    background-image 0.2s;
+    background 0.2s;
 }
 .btn:hover {
-  background: var(--teal);
-  box-shadow: 0 0 0 3px rgba(14, 143, 134, 0.25);
+  background: var(--tealD);
 }
 .btn.o {
   background: transparent;
@@ -309,7 +311,8 @@ nav > a:hover,
   display: flex;
   align-items: center;
   gap: 14px;
-  background: #fff;
+  background: #ffffffbb;
+  backdrop-filter: blur(10px);
   border-radius: 16px;
   padding: 13px 14px;
   text-decoration: none;
@@ -326,7 +329,7 @@ nav > a:hover,
 .qcard .ico {
   width: 38px;
   height: 38px;
-  border-radius: 10px;
+  border-radius: 50%;
   background: var(--deep);
   color: #fff;
   display: grid;
@@ -465,7 +468,7 @@ section {
   margin: 0 0 16px;
 }
 .pcard .link {
-  color: var(--navy);
+  color: var(--deep);
   font-weight: 600;
   font-size: 0.92rem;
   text-decoration: none;
@@ -473,7 +476,7 @@ section {
   transition: color 0.15s;
 }
 .pcard .link:hover {
-  color: var(--teal);
+  color: var(--tealD);
 }
 /* featured */
 .feat {
@@ -618,8 +621,8 @@ section {
   border-radius: 18px;
   padding: 22px;
 }
-.help svg {
-  color: var(--navy);
+.help > svg {
+  color: var(--coral);
   margin-bottom: 10px;
 }
 .help h3 {
