@@ -261,6 +261,7 @@ nav > a:hover,
   min-height: 560px;
   display: flex;
   align-items: center;
+  color: var(--ink);
 }
 .hero::before {
   content: "";
@@ -268,10 +269,10 @@ nav > a:hover,
   inset: 0;
   background: linear-gradient(
     72deg,
-    #061b29d6 20%,
-    #061b29b0 40%,
-    #061b292e 50%,
-    #061b2900 60%
+    #ffffffe6 20%,
+    #ffffffad 40%,
+    #ffffff2e 50%,
+    #ffffff00 60%
   );
   z-index: 0;
 }
@@ -279,7 +280,7 @@ nav > a:hover,
   content: "";
   position: absolute;
   inset: 0;
-  background: #061b2900;
+  background: #ffffff11;
   mask: linear-gradient(90deg, black 30%, transparent 60%);
   backdrop-filter: blur(16px);
   z-index: 0;
@@ -294,20 +295,19 @@ nav > a:hover,
 }
 .hero h1 {
   font-size: clamp(2.3rem, 4.6vw, 3.4rem);
-  color: #fff;
   text-wrap: balance;
 }
 .hero .t {
-  color: #a9c9e8;
+  color: var(--tealD);
 }
 .hero p {
-  color: #dce9ef;
+  /* color: #dce9ef; */
   font-size: 1.13rem;
   margin: 20px 0 30px;
   max-width: 46ch;
 }
 .hero .eyebrow {
-  color: #a9c9e8;
+  color: var(--tealD);
 }
 .qcard {
   width: 250px;
