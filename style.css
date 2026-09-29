@@ -11,10 +11,10 @@
   --purple: #7b4fd1;
   --blue: #2f7fe0;
   --coral: #f07a57;
-  --g-navy: linear-gradient(135deg, #164864, #0a2436);
-  --g-purple: linear-gradient(135deg, #9068e6, #63359e);
-  --g-blue: linear-gradient(135deg, #4d9cf2, #1f5fc4);
-  --g-coral: linear-gradient(135deg, #f4966f, #d8592f);
+  --g-navy: linear-gradient(135deg, #0d3550, #0d3550);
+  --g-purple: linear-gradient(135deg, #7b4fd1, #7b4fd1);
+  --g-blue: linear-gradient(135deg, #2f7fe0, #2f7fe0);
+  --g-coral: linear-gradient(135deg, #f07a57, #f07a57);
   --g-btn: linear-gradient(135deg, var(--navy), var(--deep));
   --g-btnH: linear-gradient(135deg, var(--deep), #071a28);
   box-sizing: border-box;
@@ -81,7 +81,7 @@ a:hover .arrow {
   position: sticky;
   top: env(safe-area-inset-top, 0px);
   z-index: 9;
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--line);
 }
@@ -215,7 +215,7 @@ nav > a:hover,
   gap: 8px;
   padding: 11px 22px;
   border-radius: 999px;
-  background-image: var(--g-btn);
+  background: var(--deep);
   color: #fff;
   text-decoration: none;
   font-weight: 600;
@@ -227,7 +227,7 @@ nav > a:hover,
     background-image 0.2s;
 }
 .btn:hover {
-  background-image: var(--g-btnH);
+  background: var(--teal);
   box-shadow: 0 0 0 3px rgba(14, 143, 134, 0.25);
 }
 .btn.o {
@@ -427,7 +427,7 @@ section {
 }
 .dot {
   position: absolute;
-  top: -26px;
+  top: -24px;
   left: 20px;
   width: 46px;
   height: 46px;
@@ -436,8 +436,24 @@ section {
   place-items: center;
   color: #fff;
   border: 4px solid #fff;
-  box-shadow: 0 6px 14px -6px rgba(10, 63, 92, 0.4);
+  /* box-shadow: 0 6px 14px -6px rgba(10, 63, 92, 0.4); */
   background-repeat: no-repeat;
+}
+.dot::before,
+.dot::after {
+  content: "";
+  position: absolute;
+  bottom: 18px;
+  right: -13px;
+  background: #fff;
+  width: 10px;
+  height: 10px;
+  border-radius: 0 10px 0 0;
+  corner-shape: scoop;
+}
+.dot::after {
+  right: 41px;
+  border-radius: 10px 0 0 0;
 }
 .pcard h3 {
   font-size: 1.18rem;
