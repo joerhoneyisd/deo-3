@@ -468,18 +468,18 @@
         .join("");
       $("#qcard").innerHTML = QUICK.map(
         (x) =>
-          `<a href="/category.html"><span class="ico" style="background:var(--${x[2]})">${ICON[x[2]]}</span><span><b>${x[0]}</b><span>${x[1]}</span></span>${AR}</a>`,
+          `<a href="category.html"><span class="ico" style="background:var(--${x[2]})">${ICON[x[2]]}</span><span><b>${x[0]}</b><span>${x[1]}</span></span>${AR}</a>`,
       ).join("");
       $("#pathgrid").innerHTML = PATH.map(
         (x) =>
-          `<article class="pcard"><div class="ph"><img src="${PHOTOS[x[3]]}" alt="${x[5]}"></div><div class="body"><span class="dot" style="background:var(--${x[4]})">${ICON[x[4]]}</span><h3>${x[0]}</h3><p>${x[1]}</p><a class="link" href="/category.html">${x[2]} ${AR}</a></div></article>`,
+          `<article class="pcard"><div class="ph"><img src="${PHOTOS[x[3]]}" alt="${x[5]}"></div><div class="body"><span class="dot" style="background:var(--${x[4]})">${ICON[x[4]]}</span><h3>${x[0]}</h3><p>${x[1]}</p><a class="link" href="category.html">${x[2]} ${AR}</a></div></article>`,
       ).join("");
       $("#nlist").innerHTML = NW.map(
         (x) =>
           `<article class="nitem"><div class="ph"><img src="${PHOTOS[x[2]]}" alt=""></div><div><h3>${x[0]}</h3><time>${x[1]}</time></div></article>`,
       ).join("");
       $("#qllist").innerHTML = QL.map(
-        (x) => `<a href="/category.html">${x}${CH}</a>`,
+        (x) => `<a href="category.html">${x}${CH}</a>`,
       ).join("");
       $("#mb").onclick = () => {
         const b = $(".bar");
