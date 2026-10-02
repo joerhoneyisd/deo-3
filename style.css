@@ -236,6 +236,7 @@ nav > a:hover,
 }
 .btn:hover {
   background: var(--aquaD);
+  box-shadow: var(--glow-shadow-hover);
 }
 .btn.o {
   background: transparent;
@@ -287,7 +288,7 @@ nav > a:hover,
   inset: 0;
   background: #ffffff11;
   mask: linear-gradient(90deg, black 30%, transparent 60%);
-  backdrop-filter: blur(16px);
+  backdrop-filter: saturate(2) blur(16px);
   z-index: 0;
 }
 .hero .w {
@@ -447,7 +448,7 @@ section {
 }
 .dot {
   position: absolute;
-  top: -24px;
+  top: -25px;
   left: 20px;
   width: 46px;
   height: 46px;
@@ -463,16 +464,17 @@ section {
 .dot::after {
   content: "";
   position: absolute;
-  bottom: 18px;
+  bottom: 15px;
   right: -13px;
   background: #fff;
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: 0 10px 0 0;
   corner-shape: scoop;
 }
 .dot::after {
-  right: 41px;
+  right: initial;
+  left: -13px;
   border-radius: 10px 0 0 0;
 }
 .pcard h3 {
