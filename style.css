@@ -108,6 +108,7 @@ a:hover .arrow {
   text-decoration: none;
   text-wrap: balance;
   flex: none;
+  margin-right: auto;
 }
 .logo b {
   display: block;
@@ -126,17 +127,18 @@ a:hover .arrow {
   color: var(--mute);
 }
 .logo .l2 {
-  background-image: linear-gradient(151deg, var(--aquaD), var(--deep));
+  /* background-image: linear-gradient(151deg, var(--aquaD), var(--deep)); */
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  color: var(--aquaD);
 }
 .logo small {
   display: block;
-  font-size: 0.58rem;
+  font-size: 0.5rem;
   line-height: 1.3;
-  color: var(--mute);
-  letter-spacing: 0.06em;
+  color: var(--ink);
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   margin-top: 2px;
 }
@@ -208,7 +210,6 @@ nav > a:hover,
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-left: auto;
 }
 .ic-btn {
   width: 38px;
@@ -234,7 +235,6 @@ nav > a:hover,
   font-weight: 600;
   font-size: 0.94rem;
   border: 1.5px solid transparent;
-  white-space: nowrap;
   transition:
     box-shadow 0.2s,
     background 0.2s;
@@ -252,7 +252,6 @@ nav > a:hover,
 }
 .menu {
   display: none;
-  margin-left: auto;
   background: var(--panel);
   border: 0;
   border-radius: 10px;
@@ -314,10 +313,8 @@ nav > a:hover,
   color: var(--aquaD);
 }
 .hero p {
-  /* color: #dce9ef; */
   font-size: clamp(0.8rem, 1.2222vw + 0.2133rem, 1.13rem);
   margin: 20px 0 30px;
-  max-width: 46ch;
 }
 .hero .eyebrow {
   color: var(--aquaD);
@@ -467,7 +464,6 @@ section {
   place-items: center;
   color: #fff;
   border: 4px solid #fff;
-  /* box-shadow: 0 6px 14px -6px rgba(10, 63, 92, 0.4); */
   background-repeat: no-repeat;
   transition: all 0.4s;
 }
@@ -602,6 +598,7 @@ section {
   background-image: var(--g-panel);
   border-radius: 28px;
   padding-left: 0;
+  padding-right: 0;
   overflow: hidden;
 }
 .cta .ph {
@@ -676,7 +673,8 @@ footer {
   color: #fff;
 }
 .fmain {
-  padding: 52px 0 30px;
+  padding-top: 52px;
+  padding-bottom: 30px;
   display: flex;
   justify-content: space-between;
   gap: 24px;
@@ -776,7 +774,7 @@ footer {
     border: 0;
     padding: 0 0 0 10px;
   }
-  .tools .btn span {
+  .tools .btn {
     display: none;
   }
   .qcard {
@@ -879,9 +877,9 @@ footer {
   max-width: 640px;
 }
 
-/* ---- card photo sprite (cards-sprite.jpg) ---- */
+/* ---- card photo sprite (cards-sprite.webp) ---- */
 .ph[class*="p-"] {
-  background-image: url(cards-sprite.jpg);
+  background-image: url(cards-sprite.webp);
   background-repeat: no-repeat;
   background-color: var(--panel);
 }
@@ -1031,14 +1029,7 @@ footer {
     sans-serif;
   font-variant-numeric: tabular-nums;
   line-height: 1.05;
-  background-image: linear-gradient(
-    0deg,
-    var(--surface) -100%,
-    var(--color) 500%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+  color: color-mix(var(--color) 33%, var(--panel) 66%);
   min-width: 2.4em;
 }
 /* Reserve the final number's width so the stat doesn't resize while counting.
@@ -1099,6 +1090,8 @@ footer {
 }
 .prose {
   max-width: 64ch;
+  min-width: 0;
+  width: auto;
 }
 .prose p {
   margin: 0 0 1em;
@@ -1209,6 +1202,7 @@ footer {
   border: 1px solid var(--line);
   border-radius: 24px;
   padding: 40px;
+  overflow: hidden;
 }
 .tabpanel[hidden] {
   display: none;
@@ -1233,10 +1227,17 @@ footer {
   margin-top: 36px;
   padding-top: 32px;
   border-top: 1px solid var(--line);
+  min-width: 0;
+}
+.tp-cols > div {
+  min-width: 0;
+  width: auto;
 }
 .tp-cols h3 {
   font-size: 1.3rem;
   margin-bottom: 12px;
+  min-width: 0;
+  width: auto;
 }
 /* gallery + lightbox */
 .gal {
@@ -1405,7 +1406,6 @@ footer {
 @media (max-width: 900px) {
   .hero,
   .hero.single {
-    /* --hero-img: clamp(220px, 60vw, 440px); */
     display: flex;
     min-height: 0;
     padding: calc(75vw - 4rem) 0 48px;
@@ -1416,7 +1416,6 @@ footer {
   }
   .hero::before,
   .hero::after {
-    /* display: none; */
     background: linear-gradient(
       8deg,
       #ffffff 10%,
@@ -1434,9 +1433,10 @@ footer {
   .hero.single .w {
     display: block;
     max-width: none;
+    margin-left: 0;
   }
   .hero-content {
-    max-width: none;
+    max-width: 560px;
   }
   .hero .eyebrow {
     margin: 0 0 10px;
