@@ -280,9 +280,9 @@ nav > a:hover,
   background: linear-gradient(
     72deg,
     #ffffffe6 20%,
-    #ffffffad 35%,
-    #ffffff2e 50%,
-    #ffffff00 70%
+    #ffffffad 36%,
+    #ffffff2e 48%,
+    #ffffff00 64%
   );
   z-index: 0;
 }
@@ -291,7 +291,7 @@ nav > a:hover,
   position: absolute;
   inset: 0;
   background: #ffffff11;
-  mask: linear-gradient(72deg, black 42%, transparent 64%);
+  mask: linear-gradient(72deg, black 40%, transparent 60%);
   backdrop-filter: saturate(1.5) blur(12px);
   z-index: 0;
 }
