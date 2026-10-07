@@ -104,7 +104,6 @@ a:hover .arrow {
 .logo {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 10px;
   text-decoration: none;
   text-wrap: balance;
@@ -1345,6 +1344,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 28px 48px;
 }
 .logos img {
