@@ -590,6 +590,10 @@ section {
   font-size: 0.83rem;
 }
 /* cta */
+.cta {
+  padding-left: 24px;
+  padding-right: 24px;
+}
 .cta .w {
   display: grid;
   grid-template-columns: 1fr 1.1fr;
