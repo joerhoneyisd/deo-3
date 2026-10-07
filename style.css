@@ -307,7 +307,7 @@ nav > a:hover,
   max-width: 80%;
 }
 .hero h1 {
-  font-size: clamp(2.3rem, 4.6vw, 3.4rem);
+  font-size: clamp(2.1rem, 4.8148vw + -0.2111rem, 3.4rem);
   text-wrap: balance;
 }
 .hero .t {
@@ -315,7 +315,7 @@ nav > a:hover,
 }
 .hero p {
   /* color: #dce9ef; */
-  font-size: 1.13rem;
+  font-size: clamp(0.8rem, 1.2222vw + 0.2133rem, 1.13rem);
   margin: 20px 0 30px;
   max-width: 46ch;
 }
@@ -1391,5 +1391,67 @@ footer {
   }
   .lb-next {
     right: 20px;
+  }
+}
+
+/* ---- hero: tablet + mobile (desktop untouched) ----
+   Below 901px the photo stops being a backdrop: it becomes a clear band at
+   the top of the hero (still the section's own background-image), and the
+   text sits below it on white. The gradient/blur overlays are removed. */
+@media (max-width: 900px) {
+  .hero,
+  .hero.single {
+    /* --hero-img: clamp(220px, 60vw, 440px); */
+    display: flex;
+    min-height: 0;
+    padding: calc(75vw - 4rem) 0 48px;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: auto 75vw;
+  }
+  .hero::before,
+  .hero::after {
+    /* display: none; */
+    background: linear-gradient(
+      8deg,
+      #ffffff 10%,
+      #ffffffad 36%,
+      #ffffff2e 48%,
+      #ffffff00 64%
+    );
+    bottom: auto;
+    height: calc(100vw - 4rem);
+  }
+  .hero::after {
+    mask: linear-gradient(8deg, black 40%, transparent 60%);
+  }
+  .hero .w,
+  .hero.single .w {
+    display: block;
+    max-width: none;
+  }
+  .hero-content {
+    max-width: none;
+  }
+  .hero .eyebrow {
+    margin: 0 0 10px;
+  }
+  .hero p {
+    margin: 16px 0 24px;
+    max-width: 52ch;
+  }
+  .hero .eyebrow + h1 {
+    margin-top: 0;
+  }
+  /* home: the four quick tiles duplicate the audience cards just below */
+  .hero .qcard {
+    display: none;
+  }
+}
+@media (max-width: 640px) {
+  .hero .actions .btn {
+    flex: 1 1 100%;
+    justify-content: center;
   }
 }
